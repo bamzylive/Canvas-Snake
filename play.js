@@ -54,7 +54,6 @@ function command() {
 		case 39: move[0] = 1; move[1] = 0; break;
 		case 40: move[0] = 0; move[1] = 1; break;
 	}
-	//document.write(key);
 }
 
 function clear() {
