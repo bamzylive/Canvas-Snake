@@ -1,8 +1,8 @@
 var c = document.getElementById("myCanvas");
 var cxt = c.getContext("2d");
 var first = new Array(0, 0);
-var grid = new Array(50), move = new Array(1, 0);
-for (var i = 0; i < 50; i++) {
+var grid = new Array(30), move = new Array(1, 0);
+for (var i = 0; i < 30; i++) {
 	grid[i] = new Array(30);
 	for (var j = 0; j < 30; j++)
 		grid[i][j] = 0;
@@ -18,7 +18,7 @@ function drawCircle(a, b) {
 
 function addPoint() {
 	var a = 1, b = 1;
-	a = Math.floor(Math.random() * 50);
+	a = Math.floor(Math.random() * 30);
 	b = Math.floor(Math.random() * 30);
 	grid[a][b] = -1;
 }
@@ -34,12 +34,12 @@ function draw() {
 		first[0] += move[0];
 		first[1] += move[1];
 		grid[ first[0] ][ first[1] ] = grid[ first[0]-move[0] ][ first[1]-move[1] ] + 1;
-		for (var i = 0 ; i < 50; i++)
+		for (var i = 0 ; i < 30; i++)
 			for (var j = 0; j < 30; j++)
 				if (grid[i][j] > 0)
 					grid[i][j]--;
 	}
-	for (var i = 0; i < 50; i++)
+	for (var i = 0; i < 30; i++)
 		for (var j = 0; j < 30; j++)
 			if (grid[i][j] != 0)
 				drawCircle(i * 20 + 10, j * 20 + 10);
@@ -58,12 +58,12 @@ function command() {
 
 function clear() {
 	cxt.fillStyle = "white";
-	cxt.fillRect(0, 0, 1000, 600);
+	cxt.fillRect(0, 0, 600, 600);
 	draw();
 }
 
 grid[0][0] = 1;
-grid[4][4] = -1;
+grid[15][15] = -1;
 move[0] = 1;
 move[1] = 0;
 draw();
