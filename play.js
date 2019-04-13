@@ -43,7 +43,7 @@ function draw() {
 		for (var j = 0; j < 30; j++)
 			if (grid[i][j] != 0)
 				drawCircle(i * 20 + 10, j * 20 + 10);
-	var t = setTimeout("clear()", 1000);
+	var t = setTimeout("clear()", 200);
 }
 
 function command(event) {
