@@ -46,7 +46,7 @@ function draw() {
 	var t = setTimeout("clear()", 1000);
 }
 
-function command() {
+function command(event) {
 	var key = event.keyCode;
 	switch(key) {
 		case 37: move[0] = -1; move[1] = 0; break;
