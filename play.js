@@ -9,7 +9,7 @@ for (var i = 0; i < 30; i++) {
 }
 
 function drawCircle(a, b) {
-	cxt.fillStyle = "black";
+	cxt.fillStyle = "white";
 	cxt.beginPath();
 	cxt.arc(a, b, 10, 0, Math.PI*2, true);
 	cxt.closePath();
