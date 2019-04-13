@@ -57,7 +57,7 @@ function command(event) {
 }
 
 function clear() {
-	cxt.fillStyle = "white";
+	cxt.fillStyle = "black";
 	cxt.fillRect(0, 0, 600, 600);
 	draw();
 }
