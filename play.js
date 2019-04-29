@@ -11,8 +11,8 @@ for (let i = 0; i < 30; i++) {
 	for (let j = 0; j < 30; j++)
 		grid[i][j] = 0;
 }
-grid[0][0] = 1;
-grid[15][15] = -1;
+grid[0][0] = 1;		// head	
+grid[15][15] = -1;	// food
 
 // main
 document.onkeyup = command;
