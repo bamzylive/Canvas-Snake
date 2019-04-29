@@ -7,6 +7,7 @@ let grid = new Array(30);	// info of each block of the field
 // initialize
 for (let i = 0; i < 30; i++) {
 	grid[i] = new Array(30);
+	debugger;
 	for (let j = 0; j < 30; j++)
 		grid[i][j] = 0;
 }
@@ -14,6 +15,7 @@ grid[0][0] = 1;
 grid[15][15] = -1;
 
 // main
+let dbg = document.getElementById("debug");
 document.onkeyup = command;
 render();
 
@@ -35,6 +37,22 @@ function addPoint() {
 function render() {
 	let newHead = { x: head.x + move.dx, y: head.y + move.dy };
 
+	// for debugging
+	console.log("head:");
+	console.log(head);
+	console.log("move:")
+	console.log(move);
+	console.log("newHead:");
+	console.log(newHead);
+
+	// check move validity
+	if (newHead.x < 0 || newHead.x >=  30 || 
+		newHead.y < 0 || newHead.y >= 30) {
+		// game over
+		alert("You lose.");
+		return;
+	}
+
 	if (grid[ newHead.x ][ newHead.y ] < 0) {
 		// food caught, make it the new head and generate new food
 		grid[ newHead.x ][ newHead.y ] = grid[ head.x ][ head.y ] + 1;
@@ -42,12 +60,6 @@ function render() {
 		addPoint();
 	} else {
 		// snake creeps
-		if (newHead.x < 0 || newHead.x >=  30 || 
-			newHead.y < 0 || newHead.y >= 30) {
-			// game over
-			alert("You lose.");
-			return;
-		}
 		grid[ newHead.x ][ newHead.y ] = grid[ head.x ][ head.y ] + 1;
 		head = newHead;
 		for (let i = 0 ; i < 30; i++)
