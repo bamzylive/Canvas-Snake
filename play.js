@@ -1,7 +1,7 @@
 let c = document.getElementById("myCanvas");
 let cxt = c.getContext("2d");
-let head = {x: 0, y: 0};	// Starts at the upperleft conner,
-let move = {dx: 1, dy: 0};	// while heading right.
+let head = {x: 0, y: 0};	// Snake starts at the upperleft conner,
+let move = {dx: 1, dy: 0};	// and moving towards right.
 let grid = new Array(30);	// info of each block of the field
 
 // initialize
@@ -11,7 +11,7 @@ for (let i = 0; i < 30; i++) {
 	for (let j = 0; j < 30; j++)
 		grid[i][j] = 0;
 }
-grid[0][0] = 1;		// head	
+grid[0][0] = 1;		// snake's head	
 grid[15][15] = -1;	// food
 
 // main
