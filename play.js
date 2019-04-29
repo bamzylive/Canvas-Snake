@@ -15,7 +15,6 @@ grid[0][0] = 1;
 grid[15][15] = -1;
 
 // main
-let dbg = document.getElementById("debug");
 document.onkeyup = command;
 render();
 
