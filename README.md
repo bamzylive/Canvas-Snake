@@ -7,4 +7,4 @@ Dates back to my freshman year.
 TODO:
 - [ ] Artwork
 - [ ] Bugs fixing
-- [ ] Try Remodeling by OOP 
+- [ ] Try remodeling by OOP 
