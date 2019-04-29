@@ -39,7 +39,7 @@ function render() {
 	// for debugging
 	console.log("head:");
 	console.log(head);
-	console.log("move:")
+	console.log("move:");
 	console.log(move);
 	console.log("newHead:");
 	console.log(newHead);
