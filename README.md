@@ -1,4 +1,4 @@
 # Canvas-Snake
-<a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu" /></a>
+[Comment]: <a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu" /></a>
 
 A *snake*, and a lot of *bugs*. :stuck_out_tongue_winking_eye:
